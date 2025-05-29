@@ -1,6 +1,8 @@
 import React from 'react'
 import { words } from '../constants'
 import Button from '../components/button'
+import HeroExperience from '../components/heroModels/HeroExperience'
+
 
 
 function Hero() {
@@ -22,7 +24,7 @@ function Hero() {
                                     <span key= {word.text} className='flex items-center md:gap-3 gap-1 pb-2'>
                                         <img 
                                         src={word.imgPath}
-                                        alt={word.text}
+                                        alt='Person'
                                         className='xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50'
                                         />
                                     <span>{word.text}</span>
@@ -39,7 +41,7 @@ function Hero() {
                             Hi I'm Yokesh , a developer based in India with passion for code.
                         </p>
                         <Button
-                        className='md:w-80 md:h-16 h-12'
+                        className='md:w-80 md:h-16 h-12 w-60 ' //Checkout::::
                         id="button"
                         text="See my work"
                         />
@@ -47,10 +49,16 @@ function Hero() {
                 </div>
             </header>
             {/* RIGHT SIDE WE DISPLAY THE 3D ANIMATION */}
+            <figure>
+                <div className="hero-3d-layout">
+                    <HeroExperience />
+                
+                </div>
+            </figure>
+
         </div>
-        
-        </section>
+    </section>
   )
 }
 
-export default Hero
+export default Hero ;
